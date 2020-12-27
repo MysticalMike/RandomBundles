@@ -1,7 +1,11 @@
 # RandomBundles
 Randomize community center bundles.
 
-# Experiment Commands
+Select type in Advanced Settings in Character Creation.
+
+# Experimental Commands
+Use in SMAPI console, commands may cause permanent save damage.
+
 setBundleType <S:type> <B:seeded>
   - type: 'normal', 'remixed', 'randomized'
   - seeded: true, false
