@@ -1,0 +1,10 @@
+{
+  "Name": "Random Bundles",
+  "Author": "Mystical Mike",
+  "Version": "1.0.0",
+  "Description": "Randomize community center bundles.",
+  "UniqueID": "Mysty.RandomBundles",
+  "EntryDll": "RandomBundles.dll",
+  "MinimumApiVersion": "3.0.0",
+  "UpdateKeys": []
+}
