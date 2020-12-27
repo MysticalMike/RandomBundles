@@ -8,6 +8,7 @@ setBundleType <S:type> <B:seeded>
 
 Description: Sets levels bundle type, may lose progress.
   
+  
 bundle <I:ID> <B:completed>
   - ID: bundle id 0-35
   - seeded: true, false
