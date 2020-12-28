@@ -53,14 +53,24 @@
     <Compile Include="Commands\SetBundleType.cs" />
     <Compile Include="CustomBundles\CustomBundleGenerator.cs" />
     <Compile Include="CustomBundles\FileManager.cs" />
+    <Compile Include="CustomBundles\Patches\BundlePatch.cs" />
     <Compile Include="CustomBundles\Patches\GenerateBundlesPatch.cs" />
     <Compile Include="CustomBundles\Patches\PopulateOptionsPatch.cs" />
     <Compile Include="ModEntry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Data\RandomizedBundles.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="manifest.json" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Data\BundleSprites.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Pathoschild.Stardew.ModBuildConfig.3.2.2\build\Pathoschild.Stardew.ModBuildConfig.targets" Condition="Exists('..\packages\Pathoschild.Stardew.ModBuildConfig.3.2.2\build\Pathoschild.Stardew.ModBuildConfig.targets')" />

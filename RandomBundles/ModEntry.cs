@@ -1,4 +1,6 @@
 ﻿using Harmony;
+using RandomBundles.Commands;
+using RandomBundles.CustomBundles.Patches;
 using StardewModdingAPI;
 
 namespace RandomBundles
@@ -7,8 +9,12 @@ namespace RandomBundles
     {
         public static bool Debug = true;
 
+        public static string stream;
+
         public override void Entry(IModHelper helper)
         {
+            stream = helper.DirectoryPath;
+
             InitializeClasses(helper);
 
             var harmony = HarmonyInstance.Create(this.ModManifest.UniqueID);
@@ -19,17 +25,18 @@ namespace RandomBundles
 
         private void InitializeClasses(IModHelper helper)
         {
-            CustomBundles.Patches.GenerateBundlesPatch.Initialize(this);
-            CustomBundles.Patches.PopulateOptionsPatch.Initialize(this);
+            GenerateBundlesPatch.Initialize(this);
+            PopulateOptionsPatch.Initialize(this);
+            BundlePatch.Initialize(this, stream);
 
-            Commands.SetBundleType.Initialize(Monitor);
-            Commands.Bundle.Initialize(Monitor);
+            SetBundleType.Initialize(Monitor);
+            Bundle.Initialize(Monitor);
         }
 
         private void RegisterCommands(IModHelper helper)
         {
-            helper.ConsoleCommands.Add("setbundletype", Commands.SetBundleType.CommandInfo, new Commands.SetBundleType().RunCommand);
-            helper.ConsoleCommands.Add("bundle", Commands.Bundle.CommandInfo, new Commands.Bundle().RunCommand);
+            helper.ConsoleCommands.Add("setbundletype", SetBundleType.CommandInfo, new SetBundleType().RunCommand);
+            helper.ConsoleCommands.Add("bundle", Bundle.CommandInfo, new Bundle().RunCommand);
         }
 
         public void DebugMessage(string msg)
@@ -37,5 +44,11 @@ namespace RandomBundles
             if (Debug)
                 Monitor.Log(msg, LogLevel.Debug);
         }
+
+        /*Bundles can now have custom images.
+        Bundle command now skips bundles that do not exsist.
+        Added support for ranges in 'bundle' command.
+        Added more specific errors for all commands.*/
     }
 }
+ 

@@ -1,4 +1,5 @@
-﻿using StardewModdingAPI;
+﻿using RandomBundles.CustomBundles.Patches;
+using StardewModdingAPI;
 using System;
 
 namespace RandomBundles.Commands
@@ -25,26 +26,35 @@ namespace RandomBundles.Commands
                 {
                     case "normal":
                         {
-                            CustomBundles.Patches.GenerateBundlesPatch.SetBundleData(0, use_seed);
+                            GenerateBundlesPatch.SetBundleData(0, use_seed);
                             break;
                         }
                     case "remixed":
                         {
-                            CustomBundles.Patches.GenerateBundlesPatch.SetBundleData(1, use_seed);
+                            GenerateBundlesPatch.SetBundleData(1, use_seed);
                             break;
                         }
                     case "randomized":
                         {
-                            CustomBundles.Patches.GenerateBundlesPatch.SetBundleData(2, use_seed);
+                            GenerateBundlesPatch.SetBundleData(2, use_seed);
                             break;
                         }
                     default: Monitor.Log("Invalid bundle type", LogLevel.Info); return;
                 }
                 Monitor.Log($"Set bundle type to {args[0]}", LogLevel.Info);
             }
+            catch (IndexOutOfRangeException)
+            {
+                Monitor.Log("No Boolean given.", LogLevel.Info);
+            }
             catch (Exception ex)
             {
                 Monitor.Log(ex.Message, LogLevel.Info);
+
+                if (ex is NullReferenceException || ex is FormatException)
+                {
+                    Monitor.Log("Possible cause: Invalid bundle item.", LogLevel.Info);
+                }
             }
         }
     }
