@@ -10,11 +10,11 @@ setBundleType <S:type> <B:seeded>
   - type: 'normal', 'remixed', 'randomized'
   - seeded: true, false
 
-Description: Sets levels bundle type, may lose progress.
+Description: Sets bundle type, may lose bundle progress or submitted items.
   
   
 bundle <I:ID> <B:completed>
-  - ID: bundle id 0-35
+  - ID: bundle id (or range e.g. 1-9)
   - seeded: true, false
 
-Description: Sets a bundles completion status, may lose bundle's items.
+Description: Sets bundle completion status, may lose submitted bundle items.
