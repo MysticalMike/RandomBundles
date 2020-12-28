@@ -49,6 +49,9 @@ namespace RandomBundles
         Bundle command now skips bundles that do not exsist.
         Added support for ranges in 'bundle' command.
         Added more specific errors for all commands.*/
+
+        /* Tried my best to comment the code so we dont 
+         keep getting lost <3333 -corn man */
     }
 }
  

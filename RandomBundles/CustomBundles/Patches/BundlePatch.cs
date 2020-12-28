@@ -27,7 +27,8 @@ namespace RandomBundles.CustomBundles.Patches
         {
             string[] split = rawBundleInfo.Split('/');
             string[] sprite_index = split[5].Split(':');
-
+            
+            // Load bundle image from spritesheet
             try
             {
                 if (sprite_index[0] == "Data\\BundleSprites")
@@ -44,6 +45,7 @@ namespace RandomBundles.CustomBundles.Patches
             }
         }
 
+        // Sprite sheet manager
         public static Texture2D LoadPNG(string path)
         {
             FileStream filestream = File.Open(path, FileMode.Open);

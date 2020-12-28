@@ -4,6 +4,8 @@ using System;
 
 namespace RandomBundles.Commands
 {
+
+    // Sets bundle type through SMAPI console
     class SetBundleType
     {
         public static string CommandInfo = "Sets the bundle type of the community center.\n" + CommandUsage;

@@ -7,6 +7,8 @@ using System.Collections.Generic;
 
 namespace RandomBundles.Commands
 {
+
+    // Completes and uncompletes bundles through SMAPI console
     class Bundle
     {
         public static string CommandInfo = "Complete or uncomplete community center bundle.\n" + CommandUsage;

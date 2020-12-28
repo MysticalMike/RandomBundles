@@ -5,6 +5,8 @@ using System.Web.Script.Serialization;
 
 namespace RandomBundles.CustomBundles
 {
+
+    // Bundle deserializer lmao
     class FileManager
     {
         public static List<RandomBundleData> getCustomBundleData(string path)
