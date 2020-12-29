@@ -116,6 +116,8 @@ namespace RandomBundles.CustomBundles
                     }
                     string_data.Append(reward_string);
                     string_data.Append("/");
+                    
+                    // Set flower color for bundles
                     int color = 0;
                     if (data.Color == "Red")
                     {
@@ -183,21 +185,25 @@ namespace RandomBundles.CustomBundles
             int count = int.Parse(parts[index]);
             index++;
             int quality = 0;
+            // No quality
             if (parts[index] == "NQ")
             {
                 quality = 0;
                 index++;
             }
+            // Silver quality
             else if (parts[index] == "SQ")
             {
                 quality = 1;
                 index++;
             }
+            // Gold quality
             else if (parts[index] == "GQ")
             {
                 quality = 2;
                 index++;
             }
+            // Iridium quality
             else if (parts[index] == "IQ")
             {
                 quality = 3;

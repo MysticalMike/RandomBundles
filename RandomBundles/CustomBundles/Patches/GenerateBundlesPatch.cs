@@ -39,20 +39,28 @@ namespace RandomBundles.CustomBundles.Patches
 
             switch (bundle_type)
             {
+                // Default bundles
                 default:
                     {
                         Game1.netWorldState.Value.SetBundleData(Game1.content.LoadBase<Dictionary<string, string>>("Data\\Bundles"));
                         break;
                     }
+                // Vanilla remixed bundles
                 case 1:
                     {
                         Dictionary<string, string> bundle_data = new BundleGenerator().Generate("Data\\RandomBundles", r);
                         Game1.netWorldState.Value.SetBundleData(bundle_data);
                         break;
                     }
+                
+                // Custom randomizer case
                 case 2:
                     {
+                        // Need to replace path with custom bundle data
                         string path = Path.Combine(Main.Helper.DirectoryPath, "Data\\RandomizedBundles.json");
+
+
+
                         Dictionary<string, string> bundle_data = new CustomBundleGenerator().Generate(path, r);
                         Game1.netWorldState.Value.SetBundleData(bundle_data);
                         break;

@@ -5,6 +5,8 @@ using System.Collections.Generic;
 
 namespace RandomBundles.CustomBundles.Patches
 {
+
+    // Adds randomized option in world creation UI
     [HarmonyPatch(typeof(AdvancedGameOptions), "PopulateOptions")]
     class PopulateOptionsPatch
     {
