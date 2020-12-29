@@ -45,18 +45,9 @@ namespace RandomBundles.Commands
                 }
                 Monitor.Log($"Set bundle type to {args[0]}", LogLevel.Info);
             }
-            catch (IndexOutOfRangeException)
-            {
-                Monitor.Log("No Boolean given.", LogLevel.Info);
-            }
             catch (Exception ex)
             {
-                Monitor.Log(ex.Message, LogLevel.Info);
-
-                if (ex is NullReferenceException || ex is FormatException)
-                {
-                    Monitor.Log("Possible cause: Invalid bundle item.", LogLevel.Info);
-                }
+                Monitor.Log(ex.StackTrace, LogLevel.Error);
             }
         }
     }
