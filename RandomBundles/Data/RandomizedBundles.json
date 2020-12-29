@@ -191,44 +191,48 @@
     "Keys": "0 1 2 3 4 5",
     "BundleSets": [
       {
-        "Name": "Quality Crops",
-        "Index": 3,
-        "Sprite": "3",
-        "Color": "Teal",
-        "Items": "[5 GQ Parsnip|5 GQ Green Bean|5 GQ Cauliflower|5 GQ Potato|5 GQ Blue Jazz|5 GQ Coffee Bean|5 GQ Kale|5 GQ Rhubarb|5 GQ Strawberry|5 GQ Tulip|5 GQ Unmilled Rice], [5 GQ Melon|5 GQ Hot Pepper|5 GQ Blueberry|5 GQ Hops|5 GQ Poppy|5 GQ Radish|5 GQ Summer Spangle|5 GQ Tomato|5 GQ Wheat], [5 GQ Pumpkin|5 GQ Eggplant|5 GQ Yam|5 GQ Amaranth|5 GQ Beet|5 GQ Bok Choy|5 GQ Cranberries |5 GQ Fairy Rose |5 GQ Grape]",
-        "Pick": -1,
-        "RequiredItems": -1,
-        "Reward": "1 Preserves Jar"
-      },
-      {
-        "Name": "Spring Crops",
-        "Index": 0,
-        "Sprite": "13",
-        "Color": "Green",
-        "Items": "Parsnip, Green Bean, Cauliflower, Potato, Blue Jazz, Coffee Bean, Kale, Rhubarb, Strawberry, Tulip, Unmilled Rice",
-        "Pick": 4,
-        "RequiredItems": -1,
-        "Reward": "1 Broken Glasses"
-      },
-      {
-        "Name": "Summer Crops",
-        "Index": 1,
-        "Sprite": "13",
-        "Color": "Green",
-        "Items": "Melon, Hot Pepper, Blueberry, Hops, Poppy, Radish, Summer Spangle, Tomato, Wheat",
-        "Pick": 4,
-        "RequiredItems": -1,
-        "Reward": "1 Broken Glasses"
-      },
-      {
-        "Name": "Fall Crops",
-        "Index": 2,
-        "Sprite": "13",
-        "Color": "Green",
-        "Items": "Pumpkin, Eggplant, Yam, Amaranth, Beet, Bok Choy, Cranberries, Fairy Rose, Grape",
-        "Pick": 4,
-        "RequiredItems": -1,
-        "Reward": "1 Broken Glasses"
+        "Bundles": [
+          {
+            "Name": "Quality Crops",
+            "Index": 3,
+            "Sprite": "3",
+            "Color": "Teal",
+            "Items": "[5 GQ Parsnip|5 GQ Green Bean|5 GQ Cauliflower|5 GQ Potato|5 GQ Blue Jazz|5 GQ Coffee Bean|5 GQ Kale|5 GQ Rhubarb|5 GQ Strawberry|5 GQ Tulip|5 GQ Unmilled Rice], [5  GQ Melon|5 GQ Hot Pepper|5 GQ Blueberry|5 GQ Hops|5 GQ Poppy|5 GQ Radish|5 GQ Summer Spangle|5 GQ Tomato|5 GQ Wheat], [5 GQ Pumpkin|5 GQ Eggplant|5 GQ Yam|5 GQ Amaranth|5 GQ  Beet|5 GQ Bok Choy|5 GQ Cranberries |5 GQ Fairy Rose |5 GQ Grape]",
+            "Pick": -1,
+            "RequiredItems": -1,
+            "Reward": "1 Preserves Jar"
+          },
+          {
+            "Name": "Spring Crops",
+            "Index": 0,
+            "Sprite": "13",
+            "Color": "Green",
+            "Items": "Parsnip, Green Bean, Cauliflower, Potato, Blue Jazz, Coffee Bean, Kale, Rhubarb, Strawberry, Tulip, Unmilled Rice",
+            "Pick": 4,
+            "RequiredItems": -1,
+            "Reward": "1 Broken Glasses"
+          },
+          {
+            "Name": "Summer Crops",
+            "Index": 1,
+            "Sprite": "13",
+            "Color": "Green",
+            "Items": "Melon, Hot Pepper, Blueberry, Hops, Poppy, Radish, Summer Spangle, Tomato, Wheat",
+            "Pick": 4,
+            "RequiredItems": -1,
+            "Reward": "1 Broken Glasses"
+          },
+          {
+            "Name": "Fall Crops",
+            "Index": 2,
+            "Sprite": "13",
+            "Color": "Green",
+            "Items": "Pumpkin, Eggplant, Yam, Amaranth, Beet, Bok Choy, Cranberries, Fairy Rose, Grape",
+            "Pick": 4,
+            "RequiredItems": -1,
+            "Reward": "1 Broken Glasses"
+          }
+        ]
       }
     ],
     "Bundles": [
