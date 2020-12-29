@@ -47,7 +47,7 @@ namespace RandomBundles.Commands
             }
             catch (Exception ex)
             {
-                Monitor.Log(ex.StackTrace, LogLevel.Error);
+                Monitor.Log(ex.Message + ex.StackTrace, LogLevel.Error);
             }
         }
     }

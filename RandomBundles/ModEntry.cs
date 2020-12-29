@@ -1,5 +1,6 @@
 ﻿using Harmony;
 using RandomBundles.Commands;
+using RandomBundles.CustomBundles;
 using RandomBundles.CustomBundles.Patches;
 using StardewModdingAPI;
 
@@ -28,6 +29,8 @@ namespace RandomBundles
             GenerateBundlesPatch.Initialize(this);
             PopulateOptionsPatch.Initialize(this);
             BundlePatch.Initialize(this, stream);
+
+            CustomBundleGenerator.Initialize(this);
 
             SetBundleType.Initialize(Monitor);
             Bundle.Initialize(Monitor);

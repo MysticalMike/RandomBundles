@@ -18,6 +18,13 @@ namespace RandomBundles.CustomBundles
 
         public Random random;
 
+        private static ModEntry Main;
+
+        public static void Initialize(ModEntry main)
+        {
+            Main = main;
+        }
+
         public Dictionary<string, string> Generate(string bundle_data_path, Random rng)
         {
             this.random = rng;
@@ -183,32 +190,42 @@ namespace RandomBundles.CustomBundles
             string[] parts = item_string.Trim().Split(' ');
             int index = 0;
             int count = int.Parse(parts[index]);
+            
             index++;
             int quality = 0;
-            // No quality
-            if (parts[index] == "NQ")
+
+            try
             {
-                quality = 0;
-                index++;
+                // No quality
+                if (parts[index] == "NQ")
+                {
+                    quality = 0;
+                    index++;
+                }
+                // Silver quality
+                else if (parts[index] == "SQ")
+                {
+                    quality = 1;
+                    index++;
+                }
+                // Gold quality
+                else if (parts[index] == "GQ")
+                {
+                    quality = 2;
+                    index++;
+                }
+                // Iridium quality
+                else if (parts[index] == "IQ")
+                {
+                    quality = 3;
+                    index++;
+                }
             }
-            // Silver quality
-            else if (parts[index] == "SQ")
+            catch (Exception)
             {
-                quality = 1;
-                index++;
+                Main.DebugMessage("Item: " + item_string);
             }
-            // Gold quality
-            else if (parts[index] == "GQ")
-            {
-                quality = 2;
-                index++;
-            }
-            // Iridium quality
-            else if (parts[index] == "IQ")
-            {
-                quality = 3;
-                index++;
-            }
+            
             string item_name = string.Join(" ", parts, index, parts.Length - index);
             if (char.IsDigit(item_name[0]))
             {
@@ -240,6 +257,12 @@ namespace RandomBundles.CustomBundles
                     (found_item as StardewValley.Object).Quality = quality;
                 }
             }
+
+            if (found_item == null)
+            {
+                Main.DebugMessage("Name: " + item_name);
+            }
+
             found_item.Stack = count;
             return found_item;
         }
