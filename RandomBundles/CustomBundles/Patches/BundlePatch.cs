@@ -26,6 +26,10 @@ namespace RandomBundles.CustomBundles.Patches
         public static void Postfix(Bundle __instance, ref string rawBundleInfo)
         {
             string[] split = rawBundleInfo.Split('/');
+
+            if (split.Length < 6)
+                return;
+            
             string[] sprite_index = split[5].Split(':');
 
             try

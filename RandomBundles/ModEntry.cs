@@ -44,11 +44,6 @@ namespace RandomBundles
             if (Debug)
                 Monitor.Log(msg, LogLevel.Debug);
         }
-
-        /*Bundles can now have custom images.
-        Bundle command now skips bundles that do not exsist.
-        Added support for ranges in 'bundle' command.
-        Added more specific errors for all commands.*/
     }
 }
  
