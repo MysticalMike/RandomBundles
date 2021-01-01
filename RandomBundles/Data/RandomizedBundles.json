@@ -89,7 +89,7 @@
         "Index": 2,
         "Sprite": "13",
         "Color": "Orange",
-        "Items": "1 Plum, 1 SQ Plum, 1 GQ Plum, 1 IQ Plum",
+        "Items": "1 Wild Plum, 1 SQ Wild Plum, 1 GQ Wild Plum, 1 IQ Wild Plum",
         "Pick": 4,
         "RequiredItems": -1,
         "Reward": "8 Plum Pudding"
@@ -281,9 +281,9 @@
         "Index": 5,
         "Sprite": "LooseSprites\\BundleSprites:8",
         "Color": "Blue",
-        "Items": "2 Super Cucumber",
+        "Items": "3 Super Cucumber",
         "Pick": -1,
-        "RequiredItems": 2,
+        "RequiredItems": -1,
         "Reward": "1 Worm Bin"
       },
       {
@@ -477,20 +477,20 @@
         "Index": -1,
         "Sprite": "34",
         "Color": "Purple",
-        "Items": "1 Plush Bunny, 1 Totem Pole, 1 Grave Stone, 1 Tree of the Winter Star",
+        "Items": "1 Strawberry Seeds, 1 Seafoam Pudding, 1 Jack-O-Lantern, 1 Pearl",
         "Pick": -1,
         "RequiredItems": -1,
         "Reward": "1 Seed Maker"
       },
       {
-        "Name": "Lawn Improvement",
+        "Name": "Lawn Improvements",
         "Index": -1,
-        "Sprite": "32",
-        "Color": "Green",
-        "Items": "1 Lawn Flamingo, 1 Lawn Flamingo, 1 Lawn Flamingo, 1 Lawn Flamingo, 1 Lawn Flamingo",
+        "Sprite": "Data\\BundleSprites:9",
+        "Color": "Red",
+        "Items": "1 Shrimp, 1 Shrimp, 1 Shrimp",
         "Pick": -1,
         "RequiredItems": -1,
-        "Reward": "10 Lawn Flamingo"
+        "Reward": "10 lawn"
       },
       {
         "Name": "Soberity",
@@ -510,14 +510,14 @@
         "Items": "1 Lucky Purple Shorts, 1 Lost Axe, 1 Berry Basket",
         "Pick": -1,
         "RequiredItems": -1,
-        "Reward": "5 Gold Bar"
+        "Reward": "1 Trimmed Lucky Purple Shorts"
       },
       {
         "Name": "Too Many Cocks",
         "Index": -1,
         "Sprite": "Data\\BundleSprites:0",
         "Color": "Green",
-        "Items": "25 182",
+        "Items": "1 182, 1 182, 1 182",
         "Pick": -1,
         "RequiredItems": -1,
         "Reward": "3 Tapper"

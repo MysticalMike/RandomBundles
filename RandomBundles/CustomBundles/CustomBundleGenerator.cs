@@ -217,7 +217,7 @@ namespace RandomBundles.CustomBundles
                 // Iridium quality
                 else if (parts[index] == "IQ")
                 {
-                    quality = 3;
+                    quality = 4;
                     index++;
                 }
             }
